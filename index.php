@@ -24,7 +24,7 @@
 			<!-- <img src="images/sikkim.jpg" style="height: 555px;width: 100%;"> -->
 			<div style="width: 70%;margin: 0 auto;margin-top: 150px;">
 				<h2 align="center" style="color: darkorchid;font-size: 40px;font-weight: bold;">Find Your Forum</h2>
-					<button class="btn btn-warning pull-right btn-lg text-light mb-2">Search Now</button>
+					<a href="forum.php" class="btn btn-warning pull-right btn-lg text-light mb-2">Search Now</a>
 
 			</div>
 				
