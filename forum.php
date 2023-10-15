@@ -1,12 +1,6 @@
 <?php
  include_once("./header.php");
 ?>
-
-<section class="container-fluid bg-secondary lineHeight" >
-	<div class="container">
-		<h2 class="text-center text-white p-5">Forum</h2>
-	</div>
-</section>
 <?php 
   $connect = mysqli_connect("localhost","root","","farm");
 	if(isset($_POST['submit'])){
@@ -18,6 +12,18 @@
 	}
 
 ?>
+<section style="width:100%;">
+	<div style="width:100%;margin: 0 auto;height: 170px;background: cadetblue;position: relative;">
+		<div style="width: 100%;position:absolute;top: 20%;left: 30%;">
+			<h2>Search your forum which you want Here</h2>
+			<form action="forum-search-details.php" method="get" style="position: relative;">
+				<input type="text" name="searching" style="width: 45%;height: 31px;background: #ccc;" placeholder="Enter Product Name" id="searchKey">
+				<input type="submit" name="submit" value="Submit" style="background-color: darkgoldenrod;padding: 9px;text-decoration: none;color: #fff;">
+			</form>
+			<div id="searchItem" style="width:45%;"></div>
+		</div>
+	</div>
+</section>
 <section class="container-fluid">
 	<div class="container">
 		<form class="w-50 mx-auto p-3 bg-secondary d-flex justify-content-center align-items-center" action="" method="POST">
@@ -53,28 +59,11 @@
       </div>
     </div>
     <?php }} ?>
-    <div class="card bg-light mb-3">
-      <div class="card-body d-flex justify-content-between align-items-center">
-        <div>
-          <h5 class="card-title">Post by Auntor sheikh</h5>
-          <p class="card-text">Some quick example text to build on theulk of the card's content.</p>
-        </div>
-        <button type="button" class="btn btn-secondary">View</button>
-      </div>
-    </div>
-    <div class="card bg-light mb-3">
-      <div class="card-body d-flex justify-content-between align-items-center">
-        <div>
-          <h5 class="card-title">Post by Auntor sheikh</h5>
-          <p class="card-text">Some quick example text to build on theulk of the card's content.</p>
-        </div>
-        <button type="button" class="btn btn-secondary">View</button>
-      </div>
-    </div>
 	</div>
 </section>
 <br><br>
 <?php
  include_once("./footer.php");
 ?>
+
 

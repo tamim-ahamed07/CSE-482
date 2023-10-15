@@ -39,5 +39,26 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+
+		$(document).on('click','.getsearch',function(){
+			$('#searchKey').val($(this).text());
+		});
+
+		$('#searchKey').keyup(function(){
+			var search = $('#searchKey').val();
+			$.ajax({
+					url: "ajax/searchsuggestion.php",
+					method: "POST",
+					data:{search:search},
+					success: function(data){
+						console.log(data);
+						$('#searchItem').html(data);
+					}
+				});
+		});
+	})
+</script>
   </body>
 </html>

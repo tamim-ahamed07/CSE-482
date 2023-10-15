@@ -31,7 +31,7 @@
           <?php
 
           // $connect = mysqli_connect("localhost","root","","diet");
-          $connect = new mysqli("localhost", "root", "", "diet");
+          $connect = new mysqli("localhost", "root", "", "farm");
           // Check connection
           if ($connect->connect_error) {
             die("Connection failed: " . $connect->connect_error);
@@ -40,7 +40,7 @@
           if (isset($_POST['reg'])) {
             $filename = $_FILES["uploadfile"]["name"];
             $tempname = $_FILES["uploadfile"]["tmp_name"];
-            $folder = "./image/" . $filename;
+            $folder = "./images/" . $filename;
             $sql = "INSERT INTO `admin` (`fname`, `lname`, `gender`, `phone`, `password`, `email`,`image`) values('{$_POST['fname']}' ,'{$_POST['lname']}', '{$_POST['gender']}', '{$_POST['phone']}', '{$_POST['password']}', '{$_POST['email']}', '{$filename}') ";
             if ($connect->query($sql) === TRUE && move_uploaded_file($tempname, $folder)) {
               $last_id = $connect->insert_id;

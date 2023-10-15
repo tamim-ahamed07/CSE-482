@@ -74,7 +74,7 @@ if(isset($_POST['submit'])){
           </div>
           <div class="d-md-flex flex-md-row">
             <button type="submit" name="submit" class="btn btn-outline-info text-light">Login</button>
-            <a href="signup.php" class=" text-dark  ">Don't have an account? Click here</a>
+            <a href="admin-signup.php" class=" text-dark  ">Don't have an account? Click here</a>
           </div>
             
         </form>

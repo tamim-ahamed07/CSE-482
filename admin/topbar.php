@@ -10,7 +10,6 @@
                     <img class="nav-user-photo rounded-circle" width="50" src="../images/<?php echo $_SESSION["image"]; ?>">
                 </button>
                 <div class="dropdown-menu bg-secondary" aria-labelledby="dropdownMenuButton" style="position: absolute;left: -90px">
-                    <a class="dropdown-item position-relative" href="logout/">Switch to seller</a>
                     <a class="dropdown-item position-relative" href="?logout">Logout</a>
                 </div>
                 </div>

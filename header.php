@@ -11,7 +11,7 @@ if (isset($_GET['logout'])) {
 }
 
 if (isset($_SESSION['fname'])) {
-  echo "<h3 style='padding:10px'>hello,".$_SESSION['fname']." ".$_SESSION['lname']."</h3>";
+  echo "<h3 style='padding:10px'>Hello,".$_SESSION['fname']." ".$_SESSION['lname']."</h3>";
   if(isset($_COOKIE['info'])){
     echo "<p style='padding:10px'>Your device information is ".$_COOKIE['info'] ."<p>". "<br>";
   }
@@ -30,12 +30,10 @@ if (isset($_SESSION['fname'])) {
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-<header id="Mainnavbar" class="sticky-top">
-  <div class="logo">
-    <a href="index.php"><img src="images/footer.png" class="rounded-circle" width="100"></a>
-  </div>
+<header id="Mainnavbar" class="sticky-top" style="display: flex;align-items:center;justify-content:space-between">
+  <a href="index.php"><img src="images/Far.png" class="rounded-circle" width="100"></a>
   <nav class="activation">
-    <ul class="mainUl">
+    <ul >
         <li><a href="index.php">Home</a></li>
         <li><a href="blog.php">Blog</a></li>
         <li><a href="forum.php">Forum</a></li>
